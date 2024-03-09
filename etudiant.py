@@ -102,6 +102,19 @@ class FenEtudiant(ctk.CTkFrame):
                 i+=1
 
 
+    def ajouter_etudiant(self):
+        pass
+
+    def modifier_etudiant(self):
+        pass
+
+    def supprimer_etudiant(self):
+        pass
+
+    def imprimer_etudiant(self):
+        pass            
+
+
 
 
 
