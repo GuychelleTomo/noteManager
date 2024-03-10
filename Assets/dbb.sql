@@ -1,7 +1,7 @@
 CREATE DATABASE noteManager
-
+ USE noteManager;
 CREATE TABLE classe(id_classe int AUTO_INCREMENT PRIMARY KEY,
-                    nom_classe varchar(25))
+                    nom_classe varchar(25));
 
 
 CREATE TABLE etudiant (
@@ -18,7 +18,10 @@ CREATE TABLE etudiant (
 
 CREATE TABLE utilisateur(id int AUTO_INCREMENT PRIMARY key,
                          pseudo varchar(25),
-                         mdp varchar(25))
+                         mdp varchar(25));
+
+
+INSERT INTO classe (nom_classe)VALUES("ANAPRO"),("LPGL");
 
 INSERT INTO etudiant (nom_etudiant, prenom_etudiant, sexe, email, adresse, id_classe) VALUES
 ('Dupont', 'Jean', 'M', 'jean.dupont@example.com', '123 Rue de la Liberté', 1),

@@ -63,7 +63,7 @@ class FenEtudiant(ctk.CTkFrame):
                                                            "classe"))
         # formater les colonnes
         self.tab_etudiant.column("#0", width=0, stretch=tk.NO)
-        self.tab_etudiant.column("identifiant", anchor=tk.CENTER, width=10)
+        self.tab_etudiant.column("#1", stretch=tk.NO, width=0)
         self.tab_etudiant.column("nom", anchor=tk.W, width=50)
         self.tab_etudiant.column("prenom", anchor=tk.W, width=50)
         self.tab_etudiant.column("sexe", anchor=tk.CENTER, width=10)

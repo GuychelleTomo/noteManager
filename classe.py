@@ -57,7 +57,7 @@ class FenClasse(ctk.CTkFrame):
         self.tab_classe = ttk.Treeview(frame_corps , columns=("identifiant","nom",))
         # formater les colonnes
         self.tab_classe.column("#0", width=0, stretch=tk.NO)
-        self.tab_classe.column("identifiant", anchor=tk.CENTER, width=10)
+        self.tab_classe.column("#1", stretch=tk.NO, width=0)
         self.tab_classe.column("nom", anchor=tk.CENTER, width=10)
         
 
