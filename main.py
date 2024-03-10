@@ -1,7 +1,6 @@
 import customtkinter as ctk
 import tkinter as tk
-import classe
-import etudiant
+import classe_view_model,etudiant_view_model
 
 
 class Fen_noteManager(ctk.CTk):
@@ -25,8 +24,8 @@ class Fen_noteManager(ctk.CTk):
 
 
         self.acceuil = Fen_acceuil(self)
-        self.classe =classe.FenClasse(self)
-        self.etudiant =  etudiant.FenEtudiant(self)
+        self.classe =classe_view_model.FenClasse(self)
+        self.etudiant =  etudiant_view_model.FenEtudiant(self)
 
         self.acceuil.pack(fill=tk.BOTH, expand=True)
 
@@ -60,6 +59,8 @@ class Fen_noteManager(ctk.CTk):
         self.classe.pack(fill=tk.BOTH, expand=True)
 
 
+
+
 class Fen_acceuil(ctk.CTkFrame):
 
     def __init__(self, master):
@@ -70,14 +71,6 @@ class Fen_acceuil(ctk.CTkFrame):
 
         lbl_titre = ctk.CTkLabel(self, text="BIENVENUE", font=("AREAL BLACK", 50, "bold"), fg_color="transparent")
         lbl_titre.place(relx=0.5, rely=0.5, anchor=tk.CENTER)
-
-
-
-
-
-
-
-
 
 
 

@@ -1,7 +1,7 @@
 import customtkinter as ctk
 import tkinter as tk
 from tkinter import ttk
-import connexion
+import etudiant_model
 
 class FenEtudiant(ctk.CTkFrame):
     """
@@ -15,13 +15,15 @@ class FenEtudiant(ctk.CTkFrame):
 
         super().__init__(master)
         self._corner_radius=0
+        
+        self.etudiant_model = etudiant_model.Etudiant()
 
         # creation de l'entete
         frame_entete = ctk.CTkFrame(self, height=50, corner_radius=0)
 
         
         # creation du titre
-        lbl_titre = ctk.CTkLabel(frame_entete, text="FORMULAIRE ETUDIANT", fg_color="transparent", font=('AREAL BLACK', 20, "bold"))
+        lbl_titre = ctk.CTkLabel(frame_entete, text="LISTES ETUDIANTS", fg_color="transparent", font=('AREAL BLACK', 20, "bold"))
         lbl_titre.place(relx=0.5, rely=0.5, anchor=tk.CENTER)
 
 
@@ -94,7 +96,7 @@ class FenEtudiant(ctk.CTkFrame):
 
     def recuperer_tous_etudiants(self):
         
-        etudiants = connexion.recuperer_tous_les_etudiants()
+        etudiants = self.etudiant_model.recuperer_tous_les_etudiants()
         if etudiants:
             i = 1
             for etudiant in etudiants :
