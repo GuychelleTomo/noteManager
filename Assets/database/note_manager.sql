@@ -1,5 +1,5 @@
 CREATE DATABASE noteManager
- USE noteManager;
+USE noteManager;
 CREATE TABLE classe(id_classe int AUTO_INCREMENT PRIMARY KEY,
                     nom_classe varchar(25));
 
